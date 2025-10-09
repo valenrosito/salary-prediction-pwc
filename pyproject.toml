@@ -1,0 +1,45 @@
+[project]
+name = "salary-prediction-pwc"
+version = "0.1.0"
+description = "Modelo Predictivo de Salarios para el PwC Challenge"
+authors = [
+    {name = "Tu Nombre", email = "tu.email@example.com"},
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "scikit-learn",
+    "pandas",
+    "numpy",
+    "joblib",
+    "lightgbm",
+    "shap",
+]
+
+[project.optional-dependencies]
+# Dependencias para Desarrollo y Análisis de Datos
+dev = [
+    "jupyter",
+    "notebook",
+    "matplotlib",
+    "seaborn",
+]
+# Dependencias para la API (Producción)
+api = [
+    "fastapi[all]",
+    "pydantic[email]",
+]
+# Dependencias para Testing
+test = [
+    "pytest",
+    "httpx",
+]
+# Todas las dependencias (Instalación completa)
+all = [
+    "salary-prediction-pwc[dev, api, test]"
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
