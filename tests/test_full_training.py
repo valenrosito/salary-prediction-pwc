@@ -120,7 +120,6 @@ def main():
     print("\n" + "="*80)
     print(" ✓ PROCESO COMPLETADO EXITOSAMENTE")
     print("="*80)
-    print("="*70)
 
 if __name__ == "__main__":
     main()

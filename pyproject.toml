@@ -28,6 +28,7 @@ dev = [
 api = [
     "fastapi[all]",
     "pydantic[email]",
+    "streamlit",
 ]
 test = [
     "pytest",
