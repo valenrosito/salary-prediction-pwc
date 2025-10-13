@@ -74,6 +74,8 @@ class DataPipeline:
         
         df = df.dropna(subset=[TARGET_VARIABLE])
         
+        df = df[df[TARGET_VARIABLE] >= 20000]
+        
         df[TEXT_FEATURES[0]] = df[TEXT_FEATURES[0]].fillna("")
         
         X = df[NUMERIC_FEATURES + CATEGORICAL_FEATURES + TEXT_FEATURES]
